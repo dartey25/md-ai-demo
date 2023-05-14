@@ -13,6 +13,9 @@ export const showCaseConfig = [
         title: "Summarize",
         description: "Аналізує текстовий документ та надає короткий опис його змісту українською мовою.",
     },  
-
+    {
+        title: "Support bot",
+        description: "Розмовний чат бот, натренований на найпопулярніших питаннях та відповідях MD Office.",
+    }, 
 
 ]

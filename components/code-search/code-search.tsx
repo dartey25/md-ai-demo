@@ -21,19 +21,19 @@ export function CodeSearch({ id }: CodeSearchProps) {
     if (query) {
       setLoading(true)
       setResult(null)
-      // try {
-      //   const { data } = await axios.get(`search?query=${query}`)
-      //   console.log(data)
-      //   setResult(data)
-      // } catch (err) {
-      //   console.log(err)
-      //   setResult(null)
-      // }
-      // setLoading(false)
-      setTimeout(() => {
-        setResult(fakeData)
-        setLoading(false)
-      }, 3000)
+      try {
+        const { data } = await axios.get(`search?query=${query}`)
+        console.log(data)
+        setResult(data)
+      } catch (err) {
+        console.log(err)
+        setResult(null)
+      }
+      setLoading(false)
+      // setTimeout(() => {
+      //   setResult(fakeData)
+      //   setLoading(false)
+      // }, 3000)
     } else {
       setResult(null)
     }

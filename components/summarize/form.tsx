@@ -41,11 +41,22 @@ export function SummarizeForm({
       <CardContent>
         <p>Оберіть який документ підсумувати:</p>
         <div className="ml-4 mt-2 flex flex-col space-y-2">
-          <div className="flex flex-row items-center space-x-2">
-            <Link href="https://www.mdoffice.com.ua/ua/aMDODoc.FindHelpAdv?p_file=11_19790">
-              <p>Про затвердження Порядку заповнення митних декларацій за формою єдиного адміністративного документа</p>
+          <div className="flex w-3/4 flex-row items-center justify-between space-x-2">
+            <Link
+              href="https://www.mdoffice.com.ua/ua/aMDODoc.FindHelpAdv?p_file=11_19790"
+              target="_blank"
+              className="text-muted-foreground text-sm"
+            >
+              <p>
+                Про затвердження Порядку заповнення митних декларацій за формою
+                єдиного адміністративного документа
+              </p>
             </Link>
-            <Button variant="outline" disabled={!!loading} onClick={() => onSubmit(1)}>
+            <Button
+              variant="outline"
+              disabled={!!loading}
+              onClick={() => onSubmit(1)}
+            >
               {loading === 1 ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
@@ -53,9 +64,19 @@ export function SummarizeForm({
               )}
             </Button>
           </div>
-          <div className="flex flex-row items-center space-x-2">
-            <Link href="#">Репорт про ситуацію в Україні</Link>
-            <Button variant="outline" disabled={!!loading} onClick={() => onSubmit(2)}>
+          <div className="flex w-3/4 flex-row items-center justify-between space-x-2">
+            <Link
+              href="https://www.understandingwar.org/backgrounder/russian-offensive-campaign-assessment-february-8-2023"
+              target="_blank"
+              className="text-muted-foreground text-sm"
+            >
+              Репорт про ситуацію в Україні
+            </Link>
+            <Button
+              variant="outline"
+              disabled={!!loading}
+              onClick={() => onSubmit(2)}
+            >
               {loading === 2 ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : (

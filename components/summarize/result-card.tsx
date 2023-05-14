@@ -1,8 +1,10 @@
 import * as React from "react"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { TypographyBlockquote } from "@/components/ui/blockquote"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+
 import { Summarizeresponse } from "./summarize"
+import { SumSkeleton } from "./result-skeleton"
 
 // import { TableSkeleton } from "./result-skeleton"
 
@@ -17,9 +19,13 @@ export function SearchResult({ data }: SearchResultsProps) {
         <CardTitle>Open AI</CardTitle>
       </CardHeader>
       <CardContent>
-        <TypographyBlockquote>
-          {data && data.answer ? data.answer : "Не вдалося отримати відповідь"}
-        </TypographyBlockquote>
+        {data ? (
+          <TypographyBlockquote>
+            {data.answer ? data.answer : "Не вдалося отримати відповідь"}
+          </TypographyBlockquote>
+        ) : (
+          <SumSkeleton />
+        )}
       </CardContent>
     </Card>
   )

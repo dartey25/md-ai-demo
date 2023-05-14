@@ -9,10 +9,14 @@ export const siteConfig = {
       title: "Додому",
       href: "/",
     },
+    {
+      title: "Прайс",
+      href: "/price",
+    },
   ],
   links: {
     twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
+    github: "https://github.com/dartey25/MD-AI-worbooks/tree/main/models",
     showcase: "/showcase",
   },
 }

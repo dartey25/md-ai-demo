@@ -25,20 +25,20 @@ export function EURSearch({id}: EURSearchProps) {
     if (query) {
       setLoading(true)
       setResult(null)
-      // try{
-      //   const {data} = await axios.get(`/eur?query=${query}&chain=stuff`)
-      //   console.log(data)
-      //   setResult(data)
-      // }catch(err){
-      //   console.log(err)
-      //   setResult(null)
-      // }
-      // setLoading(false)
+      try{
+        const {data} = await axios.get(`/eur?query=${query}&chain=stuff`)
+        console.log(data)
+        setResult(data)
+      }catch(err){
+        console.log(err)
+        setResult(null)
+      }
+      setLoading(false)
 
-      setTimeout(() => {
-        setResult(fakeData)
-        setLoading(false)
-      }, 3000)
+      // setTimeout(() => {
+      //   setResult(fakeData)
+      //   setLoading(false)
+      // }, 3000)
     }
   }
 

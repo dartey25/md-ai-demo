@@ -20,11 +20,14 @@ export function Summarize({ id }: SummarizeProps) {
   const [loading, setLoading] = React.useState<number| undefined>(undefined)
   const [result, setResult] = React.useState<Summarizeresponse | null>(null)
 
+  const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
   const handleSubmit = async (id: number) => {
     setLoading(id)
     setResult(null)
     try{
-      const {data} = await axios.get(`/summarize`)
+      await wait(1500)
+      const {data} = await axios.get(`/summarize?doc=${id}`)
       console.log(data)
       setResult(data)
     }catch(err){

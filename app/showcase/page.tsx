@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { CodeSearch } from "@/components/code-search/code-search"
 import { EURSearch } from "@/components/eur/eur-search"
 import { Summarize } from "@/components/summarize/summarize"
+import { SupportBot } from "@/components/support-bot/support-bot"
 
 export default function ShowcasePage() {
   const [pageIndex, setPageIndex] = useState<number>(
@@ -51,6 +52,7 @@ export default function ShowcasePage() {
         {pageIndex === 0 && <CodeSearch id={pageIndex} />}
         {pageIndex === 1 && <EURSearch id={pageIndex} />}
         {pageIndex === 2 && <Summarize id={pageIndex} />}
+        {pageIndex === 3 && <SupportBot id={pageIndex} />}
       </div>
     </>
   )
