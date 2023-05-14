@@ -4,7 +4,7 @@ import * as React from "react"
 import { useRef } from "react"
 
 import { Button } from "@/components/ui/button"
-import {ButtonLoading} from "@/components/loading-button"
+import ButtonLoading from "@/components/loading-button"
 import {
   Card,
   CardContent,
