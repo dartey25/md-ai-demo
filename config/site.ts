@@ -1,18 +1,18 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "MDOffice AI",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "AI-інновації для MDOffice: втілюйте зміни з нами",
   mainNav: [
     {
-      title: "Home",
+      title: "Додому",
       href: "/",
     },
   ],
   links: {
     twitter: "https://twitter.com/shadcn",
     github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
+    showcase: "/showcase",
   },
 }
