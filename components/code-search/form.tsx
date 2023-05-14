@@ -30,8 +30,8 @@ export function CodeSearchForm({
   loading,
   id
 }: CodeSearchProps) {
-
-  const btnRef = useRef<React.Ref<HTMLButtonElement> | undefined>(undefined)
+// @ts-ignore
+  const btnRef = useRef<Ref<HTMLButtonElement> | undefined>(undefined)
   
   return (
     <Card>

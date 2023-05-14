@@ -30,7 +30,7 @@ export function EURSearchForm({
   loading,
   id
 }: EURSearchFormProps) {
-
+// @ts-ignore
   const btnRef = useRef<Ref<HTMLButtonElement> | undefined>(undefined)
   
   return (
