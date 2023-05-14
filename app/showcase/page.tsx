@@ -11,8 +11,9 @@ import { Summarize } from "@/components/summarize/summarize"
 
 export default function ShowcasePage() {
   const [pageIndex, setPageIndex] = useState<number>(
-    Number(localStorage.getItem("pageIndex")) || 0
+    Number(typeof localStorage !== "undefined" && localStorage.getItem("pageIndex")) || 0
   )
+  
 
   useEffect(() => {
     localStorage.setItem("pageIndex", pageIndex.toString())
