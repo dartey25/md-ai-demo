@@ -58,8 +58,9 @@ export function CodeSearchForm({
             <div className="flex flex-row space-x-2">
               <Button
                 variant="outline"
+                title="машина мерседес бенз с класс"
                 onClick={() => {
-                  setQuery("машина мерседес")
+                  setQuery("машина мерседес бенз с класс")
                   btnRef.current?.click()
                 }}
                 disabled={loading}
@@ -68,8 +69,9 @@ export function CodeSearchForm({
               </Button>
               <Button
                 variant="outline"
+                title="корм для собак со вкусом говядины"
                 onClick={() => {
-                  setQuery("система контроля уровня метала")
+                  setQuery("корм для собак со вкусом говядины")
                   btnRef.current?.click()
                 }}
                 disabled={loading}
@@ -78,8 +80,9 @@ export function CodeSearchForm({
               </Button>
               <Button
                 variant="outline"
+                title="красный автомобиль с синими сидениями"
                 onClick={() => {
-                  setQuery("корм для собак")
+                  setQuery("красный автомобиль с синими сидениями")
                   btnRef.current?.click()
                 }}
                 disabled={loading}

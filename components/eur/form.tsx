@@ -58,6 +58,7 @@ export function EURSearchForm({
             <div className="flex flex-row space-x-2">
               <Button
                 variant="outline"
+                title="Как получить сертификат?"
                 onClick={() => {
                   setQuery("Как получить сертификат?")
                   btnRef.current?.click()
@@ -68,6 +69,7 @@ export function EURSearchForm({
               </Button>
               <Button
                 variant="outline"
+                title="Як заповнити графу 9?"
                 onClick={() => {
                   setQuery("Як заповнити графу 9?")
                   btnRef.current?.click()
@@ -78,6 +80,7 @@ export function EURSearchForm({
               </Button>
               <Button
                 variant="outline"
+                title="Права та обов'язки експортера"
                 onClick={() => {
                   setQuery("Права та обов'язки експортера")
                   btnRef.current?.click()
