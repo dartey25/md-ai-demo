@@ -3,6 +3,7 @@ import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
 
+
 export default function IndexPage() {
   return (
     <>
@@ -12,7 +13,7 @@ export default function IndexPage() {
           <br className="hidden sm:inline" />
           MDOffice.
         </h1>
-        <p className="text-muted-foreground max-w-[700px] text-lg sm:text-xl">
+        <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
         Дивовижні можливості штучного інтелекту для вашого бізнесу - рішення які надає MDOffice.
         </p>
       </div>
