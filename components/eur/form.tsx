@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input"
 import { showCaseConfig } from "@/config/showcase"
 
 interface EURSearchFormProps {
-  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void
+  onSubmit: (e?: React.FormEvent<HTMLFormElement>, q?: string) => void
   query: string
   setQuery: (query: string) => void
   loading: boolean
@@ -61,7 +61,7 @@ export function EURSearchForm({
                 title="Как получить сертификат?"
                 onClick={() => {
                   setQuery("Как получить сертификат?")
-                  btnRef.current?.click()
+                  onSubmit(undefined, "Как получить сертификат?")
                 }}
                 disabled={loading}
               >
@@ -72,7 +72,7 @@ export function EURSearchForm({
                 title="Як заповнити графу 9?"
                 onClick={() => {
                   setQuery("Як заповнити графу 9?")
-                  btnRef.current?.click()
+                  onSubmit(undefined, "Як заповнити графу 9?")
                 }}
                 disabled={loading}
               >
@@ -83,7 +83,7 @@ export function EURSearchForm({
                 title="Права та обов'язки експортера"
                 onClick={() => {
                   setQuery("Права та обов'язки експортера")
-                  btnRef.current?.click()
+                  onSubmit(undefined, "Права та обов'язки експортера")
                 }}
                 disabled={loading}
               >

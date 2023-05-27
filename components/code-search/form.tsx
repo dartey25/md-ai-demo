@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input"
 import { showCaseConfig } from "@/config/showcase"
 
 interface CodeSearchProps {
-  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void
+  onSubmit: (e?: React.FormEvent<HTMLFormElement>, query?: string) => void
   query: string
   setQuery: (query: string) => void
   loading: boolean,
@@ -61,7 +61,8 @@ export function CodeSearchForm({
                 title="машина мерседес бенз с класс"
                 onClick={() => {
                   setQuery("машина мерседес бенз с класс")
-                  btnRef.current?.click()
+                  //btnRef.current?.click()
+                  onSubmit(undefined, "машина мерседес бенз с класс")
                 }}
                 disabled={loading}
               >
@@ -72,7 +73,7 @@ export function CodeSearchForm({
                 title="корм для собак со вкусом говядины"
                 onClick={() => {
                   setQuery("корм для собак со вкусом говядины")
-                  btnRef.current?.click()
+                  onSubmit(undefined, "корм для собак со вкусом говядины")
                 }}
                 disabled={loading}
               >
@@ -83,7 +84,7 @@ export function CodeSearchForm({
                 title="красный автомобиль с синими сидениями"
                 onClick={() => {
                   setQuery("красный автомобиль с синими сидениями")
-                  btnRef.current?.click()
+                  onSubmit(undefined, "красный автомобиль с синими сидениями")
                 }}
                 disabled={loading}
               >

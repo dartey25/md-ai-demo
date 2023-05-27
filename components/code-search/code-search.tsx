@@ -16,13 +16,14 @@ export function CodeSearch({ id }: CodeSearchProps) {
   const [loading, setLoading] = React.useState<boolean>(false)
   const [result, setResult] = React.useState<any[] | null>(null)
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    if (query) {
+  const handleSubmit = React.useCallback(async (e?: React.FormEvent<HTMLFormElement>, customQ?: string) => {
+    e && e.preventDefault()
+    const q = customQ || query
+    if (q) {
       setLoading(true)
       setResult(null)
       try {
-        const { data } = await axios.get(`search?query=${query}`)
+        const { data } = await axios.get(`search?query=${q}`)
         console.log(data)
         setResult(data)
       } catch (err) {
@@ -37,7 +38,7 @@ export function CodeSearch({ id }: CodeSearchProps) {
     } else {
       setResult(null)
     }
-  }
+  }, [query])
 
   return (
     <>

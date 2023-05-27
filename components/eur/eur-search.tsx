@@ -20,13 +20,14 @@ export function EURSearch({id}: EURSearchProps) {
   const [loading, setLoading] = React.useState<boolean>(false)
   const [result, setResult] = React.useState<EURresponse | null>(null)
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    if (query) {
+  const handleSubmit = async (e?: React.FormEvent<HTMLFormElement>, customQ?: string) => {
+    e && e.preventDefault()
+    const q = customQ || query
+    if (q) {
       setLoading(true)
       setResult(null)
       try{
-        const {data} = await axios.get(`/eur?query=${query}&chain=stuff`)
+        const {data} = await axios.get(`/eur?query=${q}&chain=stuff`)
         console.log(data)
         setResult(data)
       }catch(err){
